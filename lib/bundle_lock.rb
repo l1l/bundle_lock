@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'builder'
-require 'bundle_outdated/gem_dependency'
-require 'bundle_outdated/searcher'
+require 'bundle_lock/gem_dependency'
+require 'bundle_lock/searcher'
 
-module BundleOutdated
+module BundleLock
   def self.search!(version='all',type='all')
      Searcher.new.search!(version,type)
   end

@@ -1,3 +1,3 @@
-module BundleOutdated
-  VERSION = "0.0.3"
+module BundleLock
+  VERSION = "0.0.4"
 end

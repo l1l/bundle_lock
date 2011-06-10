@@ -1,4 +1,4 @@
-module BundleOutdated
+module BundleLock
   class GemDependency
     attr_reader :name, :version, :handwaving
 

@@ -1,3 +1,7 @@
+## 0.0.4 (2011-06-09)
+
+* Added Maven Features and Current Version lookups.
+
 ## 0.0.3 (2011-05-06)
 
 * Gracefully handle cases where Gem.latest_version_for returns nil

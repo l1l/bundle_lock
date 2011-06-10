@@ -1,4 +1,4 @@
-module BundleOutdated
+module BundleLock
   class Searcher
     class GemfileNotFound < StandardError; end
 

@@ -6,14 +6,15 @@ Gem::Specification.new do |s|
   s.name        = "bundle_outdated"
   s.version     = BundleOutdated::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Patrick Lenz"]
-  s.email       = ["patricklenz@gmail.com"]
-  s.homepage    = "https://github.com/scoop/bundle_outdated"
-  s.summary     = %q{Find out which gems in your bundle are outdated.}
-  s.description = %q{Find out which gems in your bundle are outdated.}
+  s.authors     = ["Luis Ramos"]
+  s.email       = ["lramos85@gmail.com"]
+  s.homepage    = "https://github.com/lramos85/bundle_lock"
+  s.summary     = %q{Find out current and outdated gems in your gem file and create lock including maven.}
+  s.description = %q{Find out current and outdated gems in your gem file and create lock including maven.}
 
-  s.rubyforge_project = "bundle_outdated"
+  s.rubyforge_project = "bundle_lock"
 
+  s.add_development_dependency 'builder', '~> 3.0'
   s.add_development_dependency 'rr', '~> 1.0'
   s.required_rubygems_version = ">= 1.6.0"
   

@@ -2,25 +2,25 @@ module BundleOutdated
   class GemDependency
     attr_reader :name, :version, :handwaving
 
-    VERSION_REGEXP = /^(['"])([~><=]*)\s*(.+?)\1$/
-    GEMNAME_REGEXP = /gem\s(['"])(.+?)\1/
+    VERSION_REGEXP = /^([\(])(.+?)(?:-.+)?([\)])$/
+    #GEMNAME_REGEXP = /\s(['"])(.+?)\1/
 
     def initialize(gemfile_string)
-      self.name, self.version = gemfile_string.split(/,\s*/)
+      self.name, self.version = gemfile_string.split(/\s/)
     end
 
     def name=(new_name)
       @name = nil
-      if new_name && new_name.match(GEMNAME_REGEXP)
-        @name = $2
+      if new_name #&& new_name.match(GEMNAME_REGEXP)
+        @name = new_name
       end
     end
 
     def version=(new_version)
       @version = nil
       if new_version && new_version.match(VERSION_REGEXP)
-        @handwaving = !$2.empty? && $2
-        @version = Gem::Version.new($3)
+        #@handwaving = !$2.empty? && $2
+        @version = Gem::Version.new($2)
       end
     end
 

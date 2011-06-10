@@ -20,7 +20,10 @@ fallback_load_path(File.join(File.dirname(__FILE__), '..', 'lib')) do
 end
 
 begin
-  BundleOutdated.search!
+  args = ARGV
+  version = args[0] ||= 'all'
+  type = args[1] ||= 'all'
+  BundleOutdated.search!(version, type)
 rescue NoMethodError => e
   if e.message =~ /latest_version_for/
     puts "ERROR: Please upgrade to at least RubyGems version 1.6.0 to use this tool."

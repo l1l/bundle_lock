@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "bundle_outdated/version"
+require "bundle_lock/version"
 
 Gem::Specification.new do |s|
-  s.name        = "bundle_outdated"
-  s.version     = BundleOutdated::VERSION
+  s.name        = "bundle_lock"
+  s.version     = BundleLock::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Luis Ramos"]
   s.email       = ["lramos85@gmail.com"]

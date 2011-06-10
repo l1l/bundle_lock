@@ -14,6 +14,7 @@ versions available and thus could potentially be updated.
 
 Includes output for JRuby Maven Plugins to also list Gem dependencies
 for both current and new/outdated gems in XML Maven Pom format.
+Requires: https://github.com/mkristian/jruby-maven-plugins/
 
 ## Installation
 
